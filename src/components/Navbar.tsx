@@ -4,11 +4,16 @@ const Navbar = () => {
             <div className="container-x">
                 <nav className="flex h-16 items-center justify-between">
                     {/* Logo / Brand */}
-                    <a
-                        href="/"
-                        className="text-xl font-extrabold tracking-tight text-fg"
-                    >
-                        Akash Electricals
+                    <a href="/" className="flex items-center gap-3">
+                        <img
+                            src="/images/logo/akash-electricals-logo.png"
+                            alt="Akash Electricals"
+                            className="h-16 w-16 object-contain "
+                        />
+
+                        <span className="text-xl font-extrabold tracking-tight text-fg">
+                            Akash Electricals
+                        </span>
                     </a>
 
                     {/* Desktop Navigation */}
