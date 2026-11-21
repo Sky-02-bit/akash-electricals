@@ -1,10 +1,11 @@
+import Link from "next/link";
 const Navbar = () => {
     return (
         <header className="border-b border-border bg-surface">
             <div className="container-x">
                 <nav className="flex h-16 items-center justify-between">
                     {/* Logo / Brand */}
-                    <a href="/" className="flex items-center gap-1">
+                    <Link href="/" className="flex items-center gap-1">
                         <img
                             src="/images/logo/akash-electrical-logo.png"
                             alt="Akash Electricals"
@@ -14,16 +15,16 @@ const Navbar = () => {
                         <span className="text-xl font-extrabold tracking-tight text-fg">
                             Akash Electricals
                         </span>
-                    </a>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden items-center gap-8 md:flex">
-                        <a
+                        <Link
                             href="/"
                             className="text-sm font-medium text-muted transition hover:text-fg"
                         >
                             Home
-                        </a>
+                        </Link>
 
                         <a
                             href="/products"
