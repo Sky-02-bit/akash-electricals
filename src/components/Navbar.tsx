@@ -33,35 +33,35 @@ const Navbar = () => {
                             Products
                         </Link>
 
-                        <a
+                        <Link
                             href="/brands"
                             className="text-sm font-medium text-muted transition hover:text-fg"
                         >
                             Brands
-                        </a>
+                        </Link>
 
-                        <a
+                        <Link
                             href="/services"
                             className="text-sm font-medium text-muted transition hover:text-fg"
                         >
                             Services
-                        </a>
+                        </Link>
 
-                        <a
+                        <Link
                             href="/contact"
                             className="text-sm font-medium text-muted transition hover:text-fg"
                         >
                             Contact
-                        </a>
+                        </Link>
                     </div>
 
                     {/* CTA */}
-                    <a
+                    <Link
                         href="/contact"
                         className="btn btn-accent hidden md:inline-flex"
                     >
                         Get in Touch
-                    </a>
+                    </Link>
 
                     {/* Mobile Menu Button */}
                     <button
