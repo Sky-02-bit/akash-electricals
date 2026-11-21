@@ -26,12 +26,12 @@ const Navbar = () => {
                             Home
                         </Link>
 
-                        <a
+                        <Link
                             href="/products"
                             className="text-sm font-medium text-muted transition hover:text-fg"
                         >
                             Products
-                        </a>
+                        </Link>
 
                         <a
                             href="/brands"
