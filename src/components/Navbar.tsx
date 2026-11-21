@@ -4,9 +4,9 @@ const Navbar = () => {
             <div className="container-x">
                 <nav className="flex h-16 items-center justify-between">
                     {/* Logo / Brand */}
-                    <a href="/" className="flex items-center gap-3">
+                    <a href="/" className="flex items-center gap-1">
                         <img
-                            src="/images/logo/akash-electricals-logo.png"
+                            src="/images/logo/akash-electrical-logo.png"
                             alt="Akash Electricals"
                             className="h-16 w-16 object-contain "
                         />
