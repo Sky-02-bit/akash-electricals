@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden">
@@ -32,9 +33,9 @@ const Hero = () => {
             className="hero-in mt-8 flex flex-wrap gap-3"
             style={{ animationDelay: "240ms" }}
           >
-            <a href="/products" className="btn btn-primary">
+            <Link href="/products" className="btn btn-primary">
               Explore Products
-            </a>
+            </Link>
 
             <a href="/contact" className="btn btn-outline">
               Contact Us

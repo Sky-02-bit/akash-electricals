@@ -1,5 +1,5 @@
 import { categories } from "@/data/categories";
-
+import Link from "next/link";
 const CategorySection = () => {
     return (
         <section className="py-16 sm:py-20">
@@ -21,12 +21,12 @@ const CategorySection = () => {
                         </p>
                     </div>
 
-                    <a
+                    <Link
                         href="/products"
                         className="hidden shrink-0 text-sm font-semibold text-fg underline-offset-4 hover:underline sm:block"
                     >
                         View All
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Category grid */}
@@ -66,12 +66,12 @@ const CategorySection = () => {
 
                 {/* Mobile View All */}
                 <div className="mt-6 sm:hidden">
-                    <a
+                    <Link
                         href="/products"
                         className="text-sm font-semibold text-fg underline underline-offset-4"
                     >
                         View All Categories →
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
