@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
-
+import ProductCard from "@/components/ProductCard";
 interface ProductDetailPageProps {
     params: Promise<{
         slug: string;
@@ -19,6 +19,12 @@ export default async function ProductDetailPage({
     if (!product) {
         notFound();
     }
+
+    const relatedProducts = products.filter(
+        (item) =>
+            item.categorySlug === product.categorySlug &&
+            item.slug !== product.slug
+    );
 
     return (
         <main>
@@ -117,6 +123,31 @@ export default async function ProductDetailPage({
                     </div>
                 </div>
             </section>
+            {/* Related Products */}
+            {relatedProducts.length > 0 && (
+                <section className="border-t border-border py-14 sm:py-20">
+                    <div className="container-x">
+                        <div className="mb-8">
+                            <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted">
+                                Related Products
+                            </p>
+
+                            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-fg sm:text-4xl">
+                                You May Also Like
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                            {relatedProducts.map((relatedProduct) => (
+                                <ProductCard
+                                    key={relatedProduct.slug}
+                                    product={relatedProduct}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
         </main>
     );
 }
