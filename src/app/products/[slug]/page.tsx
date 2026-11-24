@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products } from "@/data/products";
+import { brandProducts } from "@/data/brand-products";
 import ProductCard from "@/components/ProductCard";
 interface ProductDetailPageProps {
     params: Promise<{
@@ -14,13 +14,13 @@ export default async function ProductDetailPage({
 }: ProductDetailPageProps) {
     const { slug } = await params;
 
-    const product = products.find((item) => item.slug === slug);
+    const product = brandProducts.find((item) => item.slug === slug);
 
     if (!product) {
         notFound();
     }
 
-    const relatedProducts = products.filter(
+    const relatedProducts = brandProducts.filter(
         (item) =>
             item.categorySlug === product.categorySlug &&
             item.slug !== product.slug

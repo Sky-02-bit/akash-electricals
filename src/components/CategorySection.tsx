@@ -1,11 +1,11 @@
 import { categories } from "@/data/categories";
-import Link from "next/link";
+
 const CategorySection = () => {
     return (
         <section className="py-16 sm:py-20">
             <div className="container-x">
                 {/* Section heading */}
-                <div className="mb-8 flex items-end justify-between gap-4">
+                <div className="mb-8">
                     <div>
                         <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted">
                             Shop by Category
@@ -20,13 +20,6 @@ const CategorySection = () => {
                             wiring requirements.
                         </p>
                     </div>
-
-                    <Link
-                        href="/products"
-                        className="hidden shrink-0 text-sm font-semibold text-fg underline-offset-4 hover:underline sm:block"
-                    >
-                        View All
-                    </Link>
                 </div>
 
                 {/* Category grid */}
@@ -62,16 +55,6 @@ const CategorySection = () => {
                             </div>
                         </a>
                     ))}
-                </div>
-
-                {/* Mobile View All */}
-                <div className="mt-6 sm:hidden">
-                    <Link
-                        href="/products"
-                        className="text-sm font-semibold text-fg underline underline-offset-4"
-                    >
-                        View All Categories →
-                    </Link>
                 </div>
             </div>
         </section>
