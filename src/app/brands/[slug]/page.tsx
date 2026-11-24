@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import { brands } from "@/data/brands";
-import { products } from "@/data/products";
+import { brandProducts } from "@/data/brand-products";
 
 interface BrandDetailPageProps {
     params: Promise<{
@@ -22,7 +22,7 @@ export default async function BrandDetailPage({
         notFound();
     }
 
-    const brandProducts = products.filter(
+    const productsForBrand = brandProducts.filter(
         (product) => product.brandSlug === brand.slug
     );
 
@@ -105,9 +105,9 @@ export default async function BrandDetailPage({
                         </p>
                     </div>
 
-                    {brandProducts.length > 0 ? (
+                    {productsForBrand.length > 0 ? (
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            {brandProducts.map((product) => (
+                            {productsForBrand.map((product) => (
                                 <ProductCard
                                     key={product.slug}
                                     product={product}

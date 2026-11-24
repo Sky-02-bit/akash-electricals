@@ -33,7 +33,7 @@ const Hero = () => {
             className="hero-in mt-8 flex flex-wrap gap-3"
             style={{ animationDelay: "240ms" }}
           >
-            <Link href="/products" className="btn btn-primary">
+            <Link href="/" className="btn btn-primary">
               Explore Products
             </Link>
 
