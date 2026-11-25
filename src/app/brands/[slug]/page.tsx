@@ -26,6 +26,8 @@ export default async function BrandDetailPage({
         (product) => product.brandSlug === brand.slug
     );
 
+    const categorySlug = productsForBrand[0]?.categorySlug;
+
     return (
         <main>
             {/* Breadcrumb */}
@@ -38,9 +40,20 @@ export default async function BrandDetailPage({
 
                         <span>/</span>
 
-                        <Link href="/brands" className="hover:text-fg">
-                            Brands
-                        </Link>
+                        {categorySlug ? (
+                            <Link
+                                href={`/products?category=${categorySlug}`}
+                                className="hover:text-fg"
+                            >
+                                {categorySlug === "switches"
+                                    ? "Brand Category"
+                                    : categorySlug}
+                            </Link>
+                        ) : (
+                            <span className="text-fg">
+                                Products
+                            </span>
+                        )}
 
                         <span>/</span>
 
