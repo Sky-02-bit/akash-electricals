@@ -25,7 +25,7 @@ export default async function ProductsPage({
             <section className="border-b border-border bg-surface">
                 <div className="container-x py-14 sm:py-18">
                     <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted">
-                        Our Products
+                        Our Switches Brand Category 
                     </p>
 
                     <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl">
@@ -42,7 +42,7 @@ export default async function ProductsPage({
             {/* Product Grid */}
             <section className="py-14 sm:py-18">
                 <div className="container-x">
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 all">
                         {filteredItems.map((item) => (
                             <Link
                                 key={item.slug}

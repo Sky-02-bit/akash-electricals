@@ -35,4 +35,6 @@ export const categoryBrands: CategoryBrand[] = [
         description:
             "Explore Anchor switches and electrical products available in the Switches & Plates category.",
     },
+    
+    
 ];
