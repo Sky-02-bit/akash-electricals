@@ -39,7 +39,7 @@ export default async function ProductDetailPage({
                         <span>/</span>
 
                         <Link href="/products" className="hover:text-fg">
-                            Products
+                            Brand Category
                         </Link>
 
                         <span>/</span>
