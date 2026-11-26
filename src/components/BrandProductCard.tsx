@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { BrandProduct } from "@/data/brand-products";
+import type { Product } from "@/types";
 
 interface BrandProductCardProps {
-    product: BrandProduct;
+    product: Product;
 }
 
 const BrandProductCard = ({
@@ -13,7 +13,7 @@ const BrandProductCard = ({
         <article className="card overflow-hidden">
             <div className="flex h-52 items-center justify-center bg-surface2 p-6">
                 <Image
-                    src={product.image}
+                    src={product.image ?? ""}
                     alt={product.name}
                     width={220}
                     height={220}
@@ -32,7 +32,7 @@ const BrandProductCard = ({
 
                 <div className="mt-4">
                     <Link
-                        href={`/products/${product.id}`}
+                        href={`/products/${product.slug}`}
                         className="btn btn-accent w-full"
                     >
                         Enquire About Product
@@ -44,3 +44,4 @@ const BrandProductCard = ({
 };
 
 export default BrandProductCard;
+
